@@ -1,9 +1,9 @@
 # Zeppelin with Spark on Docker 
-This package enables creating a Standalone Zeppelin on docker that connects to the spark cluster that is running on docker using `spark-docker` setup.  
+This package enables creating a Standalone Zeppelin on docker that connects to the spark cluster that is running on docker using `sparkhistory` setup.  
 
 ## How does it work?
 `docker-compose.yml` has some configuration about Zeppelin. When running Zeppelin on docker 2 points have to be taken into account:
-1. `network` section shows the docker network that zeppelin will connect to. If Zeppelin connects to the same docker network as `spark-docker` cluster, it can access spark master node by using container name of the master node. The network name of the spark-docker cluster is `${compose-project-name}_default` you can find this value in `.env` file inside `spark-docker` folder.
+1. `network` section shows the docker network that zeppelin will connect to. If Zeppelin connects to the same docker network as `sparkhistory` cluster, it can access spark master node by using container name of the master node. The network name of the 'sparkcluster' cluster is `${compose-project-name}_default` you can find this value in `.env` file inside `sparkhistory` folder.
 2. `volumes` section has 3 parts: 
 ** `notebook`: notebooks being worked on Zeppelin will be cached in this folder. After the container dies the notebooks are persisted.
 ** `logs`: Zeppelin logs in for each notebook is persisted in this folder.
