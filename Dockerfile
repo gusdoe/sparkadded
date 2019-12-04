@@ -9,7 +9,7 @@ LABEL hadoop.version=${HADOOP_VERSION}
 ENV SPARK_HOME=/opt/spark
 ENV ZEPPELIN_HOME=/zeppelin
 
-ARG SPARK_BINARYTAR=spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}
+ARG SPARK_BINARYTAR=spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}
 ARG SPARK_ARCHIVE=https://www-us.apache.org/dist/spark/${SPARK_BINARYTAR}.tgz
 
 RUN wget ${SPARK_ARCHIVE} \
