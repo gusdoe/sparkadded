@@ -1,8 +1,8 @@
-version: '2'
-services: 
+version: "2"
+services:
   zeppelin:
     build: .
-    image: anchormen/zeppelin
+    image: gusdohdock/sparkadded
     container_name: zeppelin
     environment:
       ZEPPELIN_PORT: 8090
@@ -19,5 +19,5 @@ services:
 
 networks:
   default:
-      external: 
-        name: sparkcluster_default
+    external:
+      name: sparkcluster_default
